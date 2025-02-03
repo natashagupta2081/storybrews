@@ -322,6 +322,44 @@ nav.navbar.bootsnav .navbar-toggle i{color: var(--primary-brand-color);}
 .about-list-icon ul li a i {
     margin-left: 6px;
 }
+
+.about .section-heading p {
+    font-family: 'Poppins', sans-serif;
+    text-align: justify; /* Justify text to distribute space evenly */
+    font-size: 16px; /* Increase size slightly for readability */
+    line-height: 1.8; /* Adjust line height for better spacing */
+    color: #555; 
+    max-width: 1200px; /* Allow a wider text block */
+    margin: 0 auto; /* Keeps it centered */
+    padding: 0 40px; /* Adds padding on both sides to avoid extreme width */
+}
+
+/*.ab-list-icon */
+
+/*.single-about-img */
+
+/*-------------------------------------
+        5.  Team
+--------------------------------------*/
+
+
+
+
+.team-img {
+    width: 100%; /* Make the image take the full width of the container */
+    max-width: 250px; /* Set a fixed width */
+    height: 250px; /* Set a fixed height to ensure consistency */
+    object-fit: cover; /* Ensures images maintain aspect ratio and fill the space */
+    border-radius: 15px; /* Curved corners */
+    display: block;
+    margin: 0 auto 10px; /* Centering the image */
+}
+
+.team-member {
+    text-align: center;
+    padding: 15px;
+}
+
 /*.ab-list-icon */
 
 /*.single-about-img */
@@ -685,6 +723,216 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     width: 100%;
     height: auto;
     border-radius:0;
+}
+
+
+
+/* Clients Section */
+/* .clients {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    overflow: hidden;
+} */
+
+/* Center Heading */
+.clients .section-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Slider Wrapper */
+.slider {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+}
+
+/* Moving Track */
+.slide-track {
+    display: flex;
+    width: calc(200px * 24); /* Adjust based on logos */
+    animation: scroll 32s linear infinite;
+}
+
+/* Each Slide */
+.slide {
+    width: 200px;
+    margin: 40px;
+}
+
+/* Logo Images */
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Add smooth curves to logos */
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Move half of the total width */
+}
+
+/* Stop animation on hover */
+.slide-track:hover {
+    animation-play-state: paused;
+}
+
+/*-------------------------------------
+        11. Section
+--------------------------------------*/
+
+
+.rotating-slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.box {
+    min-width: calc(90% / 3);
+    background: #f4f4f4;
+    text-align: center;
+    padding: 90px;  /* Adjust vertical height of box*/
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.box h3 {
+    margin: 0;
+}
+.box .description {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    height: 100%;
+    background: #ff8521;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.46s;
+}
+.box:hover .description {
+    opacity: 1;
+}
+.slide-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+
+/*-------------------------------------
+        11. Feedback
+--------------------------------------*/
+
+/* Feedback Section */
+.feedback-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.feedback-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.feedback-content {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.feedback-box {
+    min-width: 100%;
+    background: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-box h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feedback-box hr {
+    width: 20%;
+    margin: 10px auto;
+    border: 1px solid #ff8521;
+}
+
+.feedback-box p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Buttons */
+.feedback-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+}
+
+.feedback-btn.left {
+    left: 0;
+}
+
+.feedback-btn.right {
+    right: 0;
+}
+
+.feedback-box {
+    background-color: #f5f5f5; /* Default light background */
+    color: #333; /* Default text color */
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.feedback-box:hover {
+    background-color: orange; /* Change background to orange */
+    color: white; /* Change text color to white */
 }
 
 /*-------------------------------------
